@@ -1,0 +1,95 @@
+@import '../../sass/main';
+
+.menu {
+  .menu-btn {
+    position: fixed;
+    top: 1vw;
+    right: 10vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 1vw;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    @include respond("tablet") {
+      top: -12px;
+      right: 8vw;
+    }
+    .menu-text {
+      font-family: $header-font;
+      @include respond("tablet") {
+        font-size: 16px;
+      }
+    }
+  }
+  .menu-nav {
+    position: absolute;
+    background-color: $dark-gray;
+    top: 0;
+    right: 0vw;
+    width: 35vw;
+    height: 100vh;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    @include respond("tablet") {
+      width: 100vw;
+      min-height: 60vh;
+    }
+    .menu-logo {
+      height: 2vw;
+      width: 80%;
+      padding: 10% 5%;
+      margin: 5%;
+      @include respond("tablet") { 
+          width: 80%;
+      }
+    }
+    .menu-link-container {
+      display: flex;
+      border-top: 1px solid black;
+      margin: 0 10%;
+      padding: 5% 0;
+      @include respond("tablet") {
+        text-align: center;
+        justify-content: center;
+        border-top: none;
+      }
+      .menu-link-image {
+        margin-right: 5%;
+        height: 6vw;
+        width: 10vw;
+        object-fit: cover;
+        @include respond("tablet") {
+          display: none;
+        }
+      }
+      .menu-link-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .menu-link {
+          color: black;
+          list-style: none;
+          font-family: $header-font;
+          font-size: 1.5vw;
+          font-weight: 700;
+          @include respond("tablet") {
+            font-size: 20px;
+          }
+          &:hover {
+            color: $dark-yellow;
+          }
+        }
+        .menu-link-text {
+          font-size: 1vw;
+          font-weight: 400;
+          @include respond("tablet") {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

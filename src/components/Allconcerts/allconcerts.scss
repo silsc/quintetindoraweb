@@ -1,0 +1,73 @@
+@import '../../sass/main';
+
+.allconcerts-section-container {
+    height: 100vh;
+    padding: 0 10% 0 10%;
+    margin-top: 15%;
+    margin-bottom: 5vw;
+    position: relative;
+    @include respond("tablet") {
+      margin-top: 20%;
+    }
+    .allconcerts-title {
+      margin-top: 3%;
+      @include respond("tablet") {
+        font-size: 14vw;
+      }
+    }
+    .allconcerts-content-container {
+      display: inline-flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .concert-container {
+        flex: 25%;
+        margin: 3% 5% 0 0;
+        border-bottom: 1px solid black;
+        @include respond("tablet") {
+          min-width: 30%;
+        }
+        .concert-name {
+          font-weight: 600;
+          color: $dark-brown;
+          margin-bottom: 2%;
+          @include respond("tablet") {
+            font-size: 18px;
+          }
+        }
+        .concert-info {
+          margin-top: 1.5%;
+          @include respond("tablet") {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .goback-btn {
+      background-color: $background-color;
+      border-radius: 50%;
+      padding: 3% 2%;
+      border: 1px solid black;
+      position: fixed;
+      bottom: 10%;
+      right: 2%;
+      z-index: 1;
+      transform: rotate(30deg);
+      transition: transform .5s linear;
+      text-decoration: none;
+      color: inherit;
+      font-family: $body-font;
+      font-weight: 600;
+      @include respond("tablet") {
+        padding: 5% 3.2%;
+        font-size: 18px;
+        bottom: 5%;
+        right: 2%;
+      }
+      &:hover {
+        transform: rotate(30deg);
+        transform: scale(1.2);
+        color: #fff;
+        border: 1px solid #fff;
+      }
+    }
+}

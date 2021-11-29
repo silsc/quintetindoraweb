@@ -1,0 +1,82 @@
+@import '../../sass/main';
+
+.home {
+    padding: 0 10%;
+    position: relative;
+    z-index: -1;
+    scroll-snap-align: start;
+    @include respond("tablet")  {  
+        scroll-snap-align: none;
+        min-height: 100vh;
+    }
+    .home-container {
+        padding-top: 27vh;
+        display: grid; 
+        grid-template-columns: 0.5fr 1fr 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        height: 100%;
+        width: 100%;
+        position: relative;
+        @include respond("tablet") {  
+            padding-top: 30%;
+            display: flex;
+            flex-direction: column;
+        }
+        .grid-child {
+            align-self: center;
+        }
+            .grid-title {
+                transform: rotate(-90deg);
+                @include respond("tablet") {  
+                    display: none;
+                    .title {
+                        font-size: 8vw;
+                    }
+                }
+            }
+            .grid-img {
+                justify-self: center;
+                .home-img {
+                    height: 28vw;
+                    width: 27vw;
+                    object-fit: cover;
+                    @include respond("tablet") { 
+                        width: 60vw;
+                        height: 70vw;
+                    }
+                    picture {
+                        img {
+                            @include respond("tablet") {  
+                                width: 100%;
+                                height: 80vw;
+                            }
+                        }
+                    }
+                }
+            }
+            .grid-text {
+                padding: 0% 5%;
+                margin-right: 10%;
+                @include respond("tablet") {
+                    margin-right: 0%;
+                    text-align: justify;
+                }
+                p {
+                    @include respond("tablet") {
+                        font-size: 20px;
+                    }
+                }
+                .grid-textbox-1 {
+                    border-bottom: 1px solid black;
+                }
+                .signature {
+                    color: $dark-brown;
+                    font-weight: 600;
+                    text-align: right;
+                }
+            }
+    
+        }
+}
+

@@ -1,0 +1,37 @@
+@import '../../sass/main';
+
+    .members {
+        min-height: 100vh;
+        padding: 0 12%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        scroll-snap-align: start;
+        @include respond("tablet") { 
+            padding: 25% 15% 0 15%; 
+            scroll-snap-align: none;
+            justify-content: start;
+        }
+        .members-title {
+            position: absolute;
+            bottom: 12%;
+            right: 10%;
+            @include respond("tablet") {  
+                position: relative;
+                left: 0;                
+                top: 0;
+                font-size: 14vw;
+            }
+        }
+        .members-container {
+            display: flex;
+            justify-content: space-between;
+            @include respond("tablet") { 
+                // padding: 0 20%; 
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: start;
+            }
+        }
+    }

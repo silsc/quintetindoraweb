@@ -1,0 +1,50 @@
+@import '../../sass/main';
+
+.pointer {
+    cursor: url('../../images/cursor.png') 10 20, auto;	
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: $background-color;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+p {
+    font-family: $body-font;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.page-number {
+    font-family: $header-font;
+    position: absolute;
+    left: 7%;
+    bottom: 15%;
+    transform: rotate(-90deg);
+    @include respond("tablet") {
+        font-size: 5.5vw;
+        position: absolute;
+        bottom: 0%;
+        top: 5%;
+        transform: translate(20%, 3%);
+    }
+}
