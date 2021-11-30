@@ -1,7 +1,7 @@
 import "./members.scss"
 import * as React from "react"
 import PropTypes from "prop-types"
-import MemberCard from "../Membercard/membercard"
+import MemberCard from "../Membercard/membercard.js"
 import daniel from "../../images/daniel.jpg"
 import neus from "../../images/neus.jpg"
 import marc from "../../images/marc.jpg"
