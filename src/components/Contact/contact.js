@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Contact = ({ }) => (
+const Contact = () => (
     <section className="contact" id="contact">
       <p className="page-number">04</p>
       <div className="contact-container">

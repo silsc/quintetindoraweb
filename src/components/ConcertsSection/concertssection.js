@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { Link, StaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Concerts = ({ }) => (
+const Concerts = () => (
     <section className="concerts" id="concerts">
         <p className="page-number">02</p>
         <div className="concerts1-container">

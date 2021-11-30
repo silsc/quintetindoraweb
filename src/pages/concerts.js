@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
 import Allconcerts from "../components/Allconcerts/allconcerts"
 
 import Layout from "../components/Layout/layout"

@@ -2,9 +2,8 @@ import "./allconcerts.scss"
 import * as React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
-import { StaticImage } from "gatsby-plugin-image"
 
-const Allconcerts = ({ }) => (
+const Allconcerts = () => (
     <section className="allconcerts-section-container">
       <h2 className="allconcerts-title">Concerts</h2>
         <StaticQuery
