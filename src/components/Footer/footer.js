@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import InstaIcon from "../../images/insta.svg"
 import FbIcon from "../../images/fb.svg"
 import EmailIcon from "../../images/email.svg"
-import YoutubeIcon from "../../images/youtube.svg"
+import YoutubeIcon from "../../images/Youtube.svg"
 import { Link } from "gatsby"
 
 const Footer = ({ siteTitle }) => (
