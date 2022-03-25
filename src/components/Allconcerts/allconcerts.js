@@ -4,36 +4,43 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 
 const Allconcerts = () => (
-    <section className="allconcerts-section-container">
-      <h2 className="allconcerts-title">Concerts</h2>
-        <StaticQuery
-          query={graphql`
-          query {
-            allStrapiConcert(sort: {order: ASC, fields: fechayhora}) {
-              edges {
-                node {
-                  nombre
-                  lugar
-                  fechayhora(formatString: "DD/MM/YY, HH:MM")
-                }
+  <section className="allconcerts-section-container">
+    <h2 className="allconcerts-title">Concerts</h2>
+    <StaticQuery
+      query={graphql`
+        query {
+          allStrapiConcert(sort: { order: DESC, fields: fechayhora }) {
+            edges {
+              node {
+                nombre
+                lugar
+                fechayhora(formatString: "DD/MM/YY, HH:mm")
               }
             }
           }
-          `}
-          render={(data) => (
-            <div className="allconcerts-content-container">
-              {data.allStrapiConcert.edges.map((concert, i) => ( 
-                <div className="concert-container">
-                <p className="concert-name">{concert.node.nombre}</p>
-                <p className="concert-info">{concert.node.lugar}
-                <br />{concert.node.fechayhora}h</p>
-                </div>
-              ))}
-             </div>
-          )}
-        />
-      <p><Link to="/" className="goback-btn">Tornar</Link></p>
-   </section>
+        }
+      `}
+      render={data => (
+        <div className="allconcerts-content-container">
+          {data.allStrapiConcert.edges.map((concert, i) => (
+            <div className="concert-container">
+              <p className="concert-name">{concert.node.nombre}</p>
+              <p className="concert-info">
+                {concert.node.lugar}
+                <br />
+                {concert.node.fechayhora}h
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+    />
+    <p>
+      <Link to="/" className="goback-btn">
+        Tornar
+      </Link>
+    </p>
+  </section>
 )
 
 Allconcerts.propTypes = {
