@@ -1,15 +1,26 @@
-# Quintet Indora
+# Quintet Indora 🎶
 
 This project is a portfolio page completely responsive build for the Catalan Music Group Quintet Indora.
 
+➡️ [LIVE VERSION](https://quintetindora.netlify.app/)
 
 ## Stack
 
-This app was created with [Gatsby](https://www.gatsbyjs.com/) and styled with [Sass](https://sass-lang.com/). To add the backend in order to let the owners create and delete concerts data, the [Strapi CMS](https://strapi.io/) was used and aplied through the Strapi API.
+👩🏻‍🎨 Designed in Figma
 
-## Deployment
+👷🏻‍♀️ Built with [Gatsby](https://www.gatsbyjs.com/) 
 
-This app was deployed through Netlify and the live version can be found [here](https://quintetindora.netlify.app/)
+🎨 Styled with [Sass](https://sass-lang.com/)
+
+🗃 [Strapi CMS](https://strapi.io/) API used to let the client create and delete concerts data
+
+👩🏻‍💻 Deployed with Netlify.
+
+
+## Project setup
+```
+npm install
+```
 
 ## License
 Designed by [Silvia Salat](https://www.heyitssilvia.com/).
