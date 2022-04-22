@@ -1,6 +1,6 @@
 require("dotenv").config({
   path: `.env`,
-});
+})
 
 module.exports = {
   siteMetadata: {
@@ -29,16 +29,14 @@ module.exports = {
       options: {
         rule: {
           // include: /images/
-        }
-      }
+        },
+      },
     },
     {
       resolve: "gatsby-source-strapi",
       options: {
         apiURL: "https://indora-quintet-cms.herokuapp.com",
-        collectionTypes: [
-          `concert`
-        ],
+        collectionTypes: [`concert`],
         queryLimit: 1000,
       },
     },
@@ -54,9 +52,9 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/favicon-32x32.png`,
       },
     },
     "gatsby-plugin-offline",
   ],
-};
+}
